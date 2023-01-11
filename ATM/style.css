@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: box-border;
+    font-family:'Poppins','sans-serif';
+}
+ body
+{
+    overflow: hidden;
+}
+ section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1c1c25;
+}
+ section::before
+{
+    content: '';
+    position: absolute;
+    bottom: -150%;
+    left: 30%;
+    width: 600%;
+    height: 275%;
+    background: linear-gradient(rgb(0, 0, 255),rgb(255, 0, 191));
+    border-radius: 100%;
+}
+
+ .card {
+    position: relative;
+    width: 508px;
+    height: 314px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    z-index: 2;
+    
+  }
+  
+  .card .page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(28px);
+    transform-style: preserve-3d;
+    transition: 1s;
+  }
+
+  .card .page.front::before {
+    content:'';
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  
+  .card .page.front::after {
+    content:'';
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+  
+  .card .page.front .debit {
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  .card .page.front .bank {
+    position: absolute;
+    right: 40px;
+    top: 25px;
+    color: #fff;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 24px;
+  }
+  
+  .card .page.front .chip {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    max-width: 64px;
+  }
+  
+  .card .page.front .number {
+    position: absolute;
+    bottom: 130px;
+    left: 40px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 6px;
+    font-size: 18px;
+    text-shadow: 0 2px 1px #0005;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .card .page.front .valid {
+    position: absolute;
+    bottom: 90px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1em;
+    text-align: right;
+  }
+  
+  .card .page.front .valid span:last-child {
+    margin-left: 20px;
+    font-size: 16px;font-weight: 400;
+    letter-spacing: 2px;
+  }
+  
+  .card .page.front .cardholder {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  
